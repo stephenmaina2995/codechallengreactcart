@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productname": "Soda",
+      "price": "60",
+      "description": "Coca Cola",
+      "quantity": "500ml",
+      "img": "https://cdnprod.mafretailproxy.com/sys-master-root/h25/h94/17013975253022/24165_main.jpg_480Wx480H"
+    },
+    {
+      "id": 2,
+      "productname": "Mineral water",
+      "price": "40",
+      "description": "Keringet",
+      "quantity": "500ml",
+      "img": "https://metromartltd.co.ke/wp-content/uploads/2022/06/1-108-600x600.jpg"
+    },
+    {
+      "id": 3,
+      "productname": "Juice",
+      "price": "480",
+      "description": "Orange",
+      "quantity": "3 litre",
+      "img": "https://copia.co.ke/wp-content/uploads/2021/05/KF670_2989-20-510x510.jpg"
+    },
+    {
+      "id": 4,
+      "productname": "Queen cakes",
+      "price": "85",
+      "description": "Brown",
+      "quantity": "500ml",
+      "img": "https://cdnprod.mafretailproxy.com/sys-master-root/hab/hfe/17556590002206/12483_main.jpg_480Wx480H"
+    },
+    {
+      "id": 5,
+      "productname": "Biscuits",
+      "price": "180",
+      "description": "Ginger",
+      "quantity": "200gms",
+      "img": "https://cdnprod.mafretailproxy.com/sys-master-root/h60/h48/16813725646878/8172_main.jpg_480Wx480H"
+    },
+    {
+      "id": 6,
+      "productname": "Bread",
+      "price": "60",
+      "description": "White",
+      "quantity": "500gms",
+      "img": "https://e-mart.co.ke/image/cache/catalog/Food/FESTIVE%20BROWN%20BREAD%20600G-800x800.jpg"
+    },
+    {
+      "id": 7,
+      "productname": "Krisps",
+      "price": "60",
+      "description": "Potato",
+      "quantity": "50gms",
+      "img": "https://cdnprod.mafretailproxy.com/sys-master-root/hd5/ha2/28550182666270/32277_main.jpg_480Wx480H"
+    },
+    {
+      "id": 8,
+      "productname": "Yoghurt",
+      "price": "60",
+      "description": "Strawberry",
+      "quantity": "500ml",
+      "img": "https://naivas.online/92544-medium_default/delamere-premium-yoghurt-with-pear-and-caramel-450-ml.jpg"
+    },
+    {
+      "id": 9,
+      "productname": "Milk",
+      "price": "60",
+      "description": "Fresha",
+      "quantity": "500ml",
+      "img": "https://cdnprod.mafretailproxy.com/sys-master-root/ha9/hc2/12464191176734/35753_Main.jpg_480Wx480H"
+    },
+    {
+      "id": 10,
+      "productname": "Pop corn",
+      "price": "60",
+      "description": "Flavoured",
+      "quantity": "500ml",
+      "img": "https://images.yaoota.com/4IFDqh_Qz5x61bXUB9z-o_IdLq4=/trim/fit-in/500x500/filters:quality(80)/yaootaweb-production-ke/media/crawledproductimages/c237ba2e9e69e604f2b21414bba11885e804e9bb.jpg"
+    }
+  ]
+}
