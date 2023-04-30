@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -17,7 +17,7 @@ function ProductList() {
 
   const handleDelete = (productId) => {
     fetch(`http://localhost:8000/products/${productId}`, {
-      method: 'DELETE',
+      method: "DELETE",
     })
       .then(() => {
         setProducts(products.filter((product) => product.id !== productId));
@@ -41,19 +41,67 @@ function ProductList() {
         setProducts([...products, data]);
         event.target.reset();
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err));
+  };
+
+  const handleSubmitChanges = (event) => {
+    let productId = products.id;
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    fetch(`http://localhost:8000/products/${productId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts([...products, data]);
+        event.target.reset();
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
     <>
-    <h1>CITY SUPERMARKET</h1>
+      <h1>CITY SUPERMARKET</h1>
       <form onSubmit={handleSubmit} className="form">
-        <input type="text" name="productname" placeholder="Product Name" required />
+        <input
+          type="text"
+          name="productname"
+          placeholder="Product Name"
+          required
+        />
         <input type="number" name="price" placeholder="Price" required />
-        <input type="text" name="description" placeholder="Description" required />
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          required
+        />
         <input type="number" name="quantity" placeholder="Quantity" required />
         <input type="text" name="img" placeholder="Image URL" required />
         <button type="submit">Add Product</button>
+      </form>
+      <form onSubmit={handleSubmitChanges} className="form">
+        <input
+          type="text"
+          name="productname"
+          placeholder="Product Name"
+          required
+        />
+        <input type="number" name="price" placeholder="Price" required />
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          required
+        />
+        <input type="number" name="quantity" placeholder="Quantity" required />
+        <input type="text" name="img" placeholder="Image URL" required />
+        <button type="submit">Edit Product</button>
       </form>
       <div className="product-list">
         {products.map((product) => (
@@ -66,8 +114,12 @@ function ProductList() {
               <p>{product.description}</p>
               <div className="product-footer">
                 <div className="product-price">${product.price}</div>
-                <div className="product-quantity">{product.quantity} in stock</div>
-                <button onClick={() => handleAddToCart(product)}>Add to cart</button>
+                <div className="product-quantity">
+                  {product.quantity} in stock
+                </div>
+                <button onClick={() => handleAddToCart(product)}>
+                  Add to cart
+                </button>
                 <button onClick={() => handleDelete(product.id)}>Delete</button>
               </div>
             </div>
@@ -85,7 +137,11 @@ function ProductList() {
               <div className="cart-item-info">
                 <div className="cart-item-name">{item.productname}</div>
                 <div className="cart-item-price">${item.price}</div>
-                <button onClick={() => setCart(cart.filter((_, i) => i !== index))}>Remove</button>
+                <button
+                  onClick={() => setCart(cart.filter((_, i) => i !== index))}
+                >
+                  Remove
+                </button>
               </div>
             </div>
           ))}
@@ -93,5 +149,5 @@ function ProductList() {
       </div>
     </>
   );
-};
+}
 export default ProductList;
