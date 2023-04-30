@@ -1,7 +1,7 @@
 ## Overview
 This code is a React component that renders a simple e-commerce website for a supermarket. The website allows users to view a list of products, add products to their cart, and remove products from their cart. It also allows administrators to add new products and delete existing ones.
 
-## Getting Started
+## Setup
 To use this code, you will need to have a basic understanding of React and how to create components. You will also need to have Node.js and npm (Node Package Manager) installed on your computer.
 
 To get started, you can clone this repository or create a new React project and copy the ProductList component into your project.
