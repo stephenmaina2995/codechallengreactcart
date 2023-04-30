@@ -197,3 +197,15 @@
     outline: none;
     height: 40px;
   }
+  .flex{
+    display:flex;
+    flex-wrap: wrap;
+  }
+  .shopping-card{
+    justify-content: space-between;
+    background-color: rgb(49, 154, 190);
+    padding: 10px 30px;
+  }
+  .product-item{
+    padding: 20px;
+  }

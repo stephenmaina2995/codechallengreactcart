@@ -1,37 +1,3 @@
-// import "./App.css";
-// import React,{ useState, useEffect } from "react";
-
-// const App = () => {
-  
-// const[products, setProduct]=useState([]);
-//   useEffect(() => {
-//     fetch("http://localhost:8000/products")
-//       .then((response) => response.json())
-//       .then((data) => setProduct(data));
-//   }, []);
-
-//   return (
-//     <div className="App">
-//      {
-//      products.map((product) =>(
-//       <table>
-//         <tr>
-//         <td>product.productName</td>
-//         <td>product.price</td>
-//         <td>product.description</td>
-//         <td>product.quantity</td>
-//         <td>product.img</td>
-        
-//       </tr>
-//       </table>
-//      ))
-//      }
-//     </div>
-//   );
-// };
-
-// export default App;
-
 import React, { useState, useEffect } from 'react';
 
 function ProductList() {
